@@ -18,6 +18,15 @@ const init = async () => {
         }
     });
 
+    server.route({
+        method: 'POST',
+        path: '/',
+        handler: (request, h) => {
+
+            return 'Hello World!';
+        }
+    });
+
     await server.start();
     console.log('Server running on %s', server.info.uri);
 };
